@@ -1,91 +1,193 @@
-;
-*{
-	padding: 0;
-	margin: 0;
+:root {
+  --headerfont: Oswald, sans-serif;
+  --bodyfont: Quattrocento, serif;
+  --primarycolor: #3f51b5;
+  --secondarycolor: #92bddf;
+  --midtonecolor: #d7d7d7;
+  --accentcolor: #f22c00;
+  --mutedaccentcolor: #FF8547;
+  --highlightcolor: #ffffff;
+  --radius: 5px;
 }
-.wrapper{
-	background: url(cool.jpg) no-repeat;
-	background-size: cover;
-	height: 100vh;
+* {
+  padding: 0;
+  margin: 0;
 }
-.navbar{
-	position: fixed;
-	height: 80px;
-	width: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0,0.4);
+
+.container {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.navbar .logo{
-	width: 140px;
-	height: auto;
-	padding: 20px 100px;
+.heroWrapper {
+  background-image: url(/marketing/imgs/Logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
-.navbar ul{
-	float: right;
-	margin-right: 20px;
+h1 {
+  font-family: var(--headerfont);
+  font-size: 2rem;
 }
-.navbar ul li{
-	list-style: none;
-	margin: 0 8px;
-	display: inline-block;
-	line-height: 80px; 
+
+.buttons {
+margin-top: 20px;
 }
-.navbar ul li a{
-	font-size: 20px;
-	font-family: 'Roboto', sans-serif;
-	color: white;
-	padding: 6px 13px;
-	text-decoration: none;
-	transition: .4s;
+
+button {
+background-color: var(--primarycolor) ;
+font-family: var(--headerfont);
+font-size: 2rem;
+padding: 0 3vw;
+border: none;
+border-radius: var(--radius);
+color: var(--highlightcolor);
 }
-.navbar ul li a.active,
-.navbar ul li a:hover{
-	background: red;
-	border-radius: 2px;
+
+.btn1 {
+  background-color: var(--midtonecolor);
+  margin-right: 1rem;
+  color: black;
 }
-.wrapper .center{
-	position: absolute;
-	left: 50%;
-	top: 55%;
-	transform: translate(-50%, -50%);
-	font-family: sans-serif;
-	user-select: none;
+
+footer {
+  justify-content: space-between;
+  display: flex;
+  background-color: var(--midtonecolor);
+  padding: 3vw;
 }
-.center h1{
-	color: white;
-	font-size: 70px;
-	width: 900px;
-	font-weight: bold;
-	text-align: center;
+
+footer p {
+  margin-bottom: 10px;
 }
-.center h2{
-	color: white;
-	font-size: 70px;
-	font-weight: bold;
-	margin-top: 10px;
-	width: 885px;
-	text-align: center;
+
+.widetext {
+  width: 40%;
 }
-.center .buttons{
-	margin: 35px 280px;
+
+.first {
+  padding-right: 20px;
 }
-.buttons button{
-	height: 50px;
-	width: 150px;
-	font-size: 18px;
-	font-weight: 600;
-	color: #ffb3b3;
-	background: red;
-	outline: none;
-	cursor: pointer;
-	border: 1px solid #cc0000;
-	border-radius: 25px;
-	transition: .4s;
+
+.last{
+  padding-left: 20px;
 }
-.buttons .btn2{
-	margin-left: 25px;
+
+.middletext {
+  flex-grow: 1;
 }
-.buttons button:hover{
-	background: #cc0000;
+
+.socialIcons {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  color: var(--primarycolor);
 }
+
+h5 {
+  font-family: var(--headerfont);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.middletext ul li {
+  margin: 7px;
+}
+
+.middletext ul li a{
+  text-decoration: none;
+}
+
+.newsletter button {
+  font-size: 1rem;
+}
+
+input {
+  width: 60%;
+}
+
+@media (max-width: 850px){
+  .newsletter{
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    width: 100%;
+  }
+  .newsletter button {
+    width: 50%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 280px) {
+  .hide{
+    display: none;
+  }
+}
+
+/* .wrapper .center {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  font-family: var(--bodyfont);
+  user-select: none;
+}
+.center h1 {
+  color: black;
+  font-size: 70px;
+  width: 900px;
+  font-weight: bold;
+  text-align: center;
+}
+.center h2 {
+  color:black;
+  font-family: var(--headerfont);
+  font-size: 70px;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 885px;
+  text-align: center;
+}
+.center .buttons {
+  margin: 35px 280px;
+}
+.buttons button {
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primarycolor);
+  background: var(--primarycolor);
+  outline: none;
+  cursor: pointer;
+  border: 1px solid var(--primarycolor);
+  border-radius: 25px;
+  transition: 0.4s;
+}
+.buttons .btn2 {
+  margin-left: 25px;
+}
+.buttons button:hover {
+  background: var(--primarycolor);
+}
+
+
+button {
+    color: #1565C0 !important;
+    font-weight: bold !important;
+    padding: 10px 20px 10px 20px !important;
+    border-radius: 0 !important
+}
+
+button:hover {
+    color: #1565C0 !important;
+    background-color: #fff
+} */

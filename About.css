@@ -1,0 +1,156 @@
+:root {
+    --headerfont: Oswald, sans-serif;
+    --bodyfont: Quattrocento, serif;
+    --primarycolor: #3f51b5;
+    --secondarycolor: #92bddf;
+    --midtonecolor: #d7d7d7;
+    --accentcolor: #f22c00;
+    --mutedaccentcolor: #FF8547;
+    --highlightcolor: #ffffff;
+    --radius: 5px;
+}
+
+.container {
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+.infoCards {
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px auto;
+    flex-grow: 1;
+}
+.card {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card img {
+width: 80%;
+border-radius: 50%;
+}
+.cardtext{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.cardtext h2{
+    font-family: var(--headerfont);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.cardtext h3 {
+    font-family: var(--headerfont);
+    font-weight: bold;
+    color: var(--secondarycolor);
+    margin-top: 10px;
+    text-transform: uppercase;
+
+}
+
+.buttons {
+margin-top: 20px;
+}
+
+button {
+background-color: var(--primarycolor) ;
+font-family: var(--headerfont);
+font-size: 2rem;
+padding: 0 3vw;
+border: none;
+border-radius: var(--radius);
+color: var(--highlightcolor);
+}
+
+.btn1 {
+    background-color: var(--midtonecolor);
+    margin-right: 1rem;
+    color: black;
+}
+
+
+footer {
+justify-content: space-between;
+display: flex;
+background-color: var(--midtonecolor);
+padding: 3vw;
+}
+
+footer p {
+margin-bottom: 10px;
+}
+
+.widetext {
+width: 40%;
+}
+
+.first {
+padding-right: 20px;
+}
+
+.last{
+padding-left: 20px;
+}
+
+.middletext {
+flex-grow: 1;
+}
+
+.socialIcons {
+display: flex;
+justify-content: space-between;
+width: 40%;
+color: var(--primarycolor);
+}
+
+h5 {
+font-family: var(--headerfont);
+font-size: 1rem;
+font-weight: bold;
+margin-bottom: 8px;
+}
+
+.middletext ul li {
+margin: 7px;
+}
+
+.middletext ul li a{
+text-decoration: none;
+}
+
+.newsletter button {
+font-size: 1rem;
+}
+
+input {
+width: 60%;
+}
+
+@media (max-width: 850px){
+.newsletter{
+    display: flex;
+    flex-direction: column;
+}
+input {
+    width: 100%;
+}
+.newsletter button {
+    width: 50%;
+    margin-top: 10px;
+}
+}
+
+@media (max-width: 280px) {
+.hide{
+    display: none;
+}
+}
